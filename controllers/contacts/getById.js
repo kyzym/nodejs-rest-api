@@ -1,13 +1,8 @@
-const contactOperations = require("../../models/");
-const createError = require("http-errors");
+const service = require("../../services");
 
-const getByID = async (req, res, next) => {
+const getByID = async (req, res) => {
   const { id } = req.params;
-  const result = await contactOperations.getById(id);
-
-  if (!result) {
-    throw createError(404, `contact with id:${id} not found`);
-  }
+  const result = await service.getByID(id);
 
   res.json({
     status: "success",
