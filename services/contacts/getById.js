@@ -1,5 +1,7 @@
-const { Contact } = require("../../models/contact");
+const { Contact } = require('../../models/contact');
 
-const getByID = async (id) => await Contact.findById(id);
+module.exports = async (req) => {
+  const { id } = req.params;
 
-module.exports = getByID;
+  return await Contact.findById(id);
+};
