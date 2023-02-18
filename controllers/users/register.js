@@ -1,10 +1,8 @@
-const {
-  register,
-  sendEmail,
-} = require('../../services/users');
+const { register } = require('../../services/users');
 const { Conflict } = require('http-errors');
 const { v4: uuid } = require('uuid');
 const gravatar = require('gravatar');
+const sendEmail = require('../../services/email/mailService');
 
 module.exports = async (req, res) => {
   const { email } = req.body;
