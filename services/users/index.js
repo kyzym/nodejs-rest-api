@@ -5,7 +5,6 @@ const updateSubscription = require('./updateSubscription');
 const updateToken = require('./updateToken');
 const updateAvatar = require('./updateAvatar');
 const resizeAvatar = require('./resizeAvatar');
-const sendEmail = require('./mailService');
 
 module.exports = {
   register,
@@ -15,5 +14,4 @@ module.exports = {
   updateToken,
   updateAvatar,
   resizeAvatar,
-  sendEmail,
 };

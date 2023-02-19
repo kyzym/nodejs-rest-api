@@ -1,6 +1,6 @@
 const { BadRequest, NotFound } = require('http-errors');
 const { User } = require('../../models/user');
-const { sendEmail } = require('../../services/users');
+const sendEmail = require('../../services/email/mailService');
 
 module.exports = async (req, res) => {
   const { email } = req.body;
