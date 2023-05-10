@@ -45,3 +45,15 @@ This is a server-side application built with Node.js, providing user authenticat
 
 - `npm run start` - starts the production server
 - `npm run start:dev` - starts the development server with hot-reloading
+
+## API Documentation
+
+Detailed API documentation is available through Postman:
+
+- [API Contacts Collection](https://documenter.getpostman.com/view/23534872/2s935iv6tR)
+- [API Users Collection](https://documenter.getpostman.com/view/23534872/2s93ebRpqu)
+
+
+These documents contain comprehensive information about API endpoints, request headers, payloads, and responses. They also include examples of how to use the API with different programming languages.
+
+
