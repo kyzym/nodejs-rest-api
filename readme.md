@@ -1,4 +1,4 @@
-# Node.js Backend Application
+# Node.js Backend REST API
 
 ![Node.js](https://img.shields.io/badge/-Node.js-43853d?style=flat-square&logo=Node.js&logoColor=white)
 ![Express.js](https://img.shields.io/badge/-Express.js-404D59?style=flat-square)
