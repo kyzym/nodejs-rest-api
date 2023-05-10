@@ -1,31 +1,47 @@
-## GoIT Node.js Course Template Homework
+# Node.js Backend Application
 
-Виконайте форк цього репозиторію для виконання домашніх завдань (2-6)
-Форк створить репозиторій на вашому http://github.com
+![Node.js](https://img.shields.io/badge/-Node.js-43853d?style=flat-square&logo=Node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/-Express.js-404D59?style=flat-square)
+![MongoDB](https://img.shields.io/badge/-MongoDB-black?style=flat-square&logo=mongodb)
+![Docker](https://img.shields.io/badge/-Docker-black?style=flat-square&logo=docker)
 
-Додайте ментора до колаборації
+This is a server-side application built with Node.js, providing user authentication and contact management functionality. The app utilizes Express for server creation, MongoDB for data storage, and various middlewares for request validation, error handling, routing, and authentication.
 
-Для кожної домашньої роботи створюйте свою гілку.
+## Features
 
-- hw02
-- hw03
-- hw04
-- hw05
-- hw06
+- User Authentication:
+  - Registration (`POST /signup`)
+  - Registration confirmation (`GET /verify/:verificationCode`)
+  - Resending of confirmation email (`POST /verify/`)
+  - Login (`POST /login`)
+  - Logout (`GET /logout`)
+  - Retrieval of current user's data (`GET /current`)
+  - User subscription update (`PATCH /`)
+  - User avatar upload (`PATCH /avatars`)
 
-Кожна нова гілка для др повинна робитися з master
+- Contact Management:
+  - Retrieval of all contacts (`GET /`)
+  - Retrieval of specific contact info (`GET /:id`)
+  - Adding of new contact (`POST /`)
+  - Updating of contact info (`PUT /:id`)
+  - Contact deletion (`DELETE /:id`)
+  - Updating of contact's 'favorite' status (`PATCH /:id/favorite`)
 
-Після того, як ви закінчили виконувати домашнє завдання у своїй гілці, необхідно зробити пулл-реквест (PR). Потім додати ментора для рев'ю коду. Тільки після того, як ментор заапрувить PR, ви можете виконати мердж гілки з домашнім завданням у майстер.
+## Technologies & Tools
 
-Уважно читайте коментарі ментора. Виправте зауваження та зробіть коміт у гілці з домашнім завданням. Зміни підтягнуться у PR автоматично після того, як ви відправите коміт з виправленнями на github
-Після виправлення знову додайте ментора на рев'ю коду.
+- ![Node.js](https://img.shields.io/badge/-Node.js-43853d?style=flat-square&logo=Node.js&logoColor=white) and ![Express.js](https://img.shields.io/badge/-Express.js-404D59?style=flat-square) for server creation and request routing.
+- ![MongoDB](https://img.shields.io/badge/-MongoDB-black?style=flat-square&logo=mongodb) for user and contact data storage.
+- ![Mongoose](https://img.shields.io/badge/-Mongoose-880000?style=flat-square&logo=mongoose&logoColor=white) for data schema creation and database interaction.
+- Request validation using Joi and custom middleware.
+- User authentication and token handling using JWT.
+- Image upload and user avatar update using Multer.
+- Email sending for user registration confirmation using Nodemailer.
+- Request logging using Morgan.
+- Cross-Origin Resource Sharing (CORS) enabled using the cors package.
+- Environment variable handling using dotenv.
+- ![Docker](https://img.shields.io/badge/-Docker-black?style=flat-square&logo=docker) for containerization and easy deployment.
 
-- При здачі домашньої роботи є посилання на PR
-- JS-код чистий та зрозумілий, для форматування використовується Prettier
+## Scripts
 
-### Команди:
-
-- `npm start` &mdash; старт сервера в режимі production
-- `npm run start:dev` &mdash; старт сервера в режимі розробки (development)
-- `npm run lint` &mdash; запустити виконання перевірки коду з eslint, необхідно виконувати перед кожним PR та виправляти всі помилки лінтера
-- `npm lint:fix` &mdash; та ж перевірка лінтера, але з автоматичними виправленнями простих помилок
+- `npm run start` - starts the production server
+- `npm run start:dev` - starts the development server with hot-reloading
