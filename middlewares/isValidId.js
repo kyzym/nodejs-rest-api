@@ -5,9 +5,7 @@ const isValidId = (req, _, next) => {
   const { id } = req.params;
 
   if (!isValidObjectId(id)) {
-    const error = BadRequest(
-      `format of this id:${id} is not correct`
-    );
+    const error = BadRequest('ID not found');
     next(error);
   }
   next();
